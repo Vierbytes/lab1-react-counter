@@ -1,0 +1,242 @@
+/**
+ * AdvancedCounter Component Styles
+ *
+ * This stylesheet provides a clean, modern look for the counter app.
+ * I'm using flexbox for layout and CSS variables for consistent colors.
+ */
+
+/* =================================
+   Main Container
+   ================================= */
+.advanced-counter {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.advanced-counter h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================
+   Counter Display Section
+   ================================= */
+.counter-display {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.counter-display h2 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================
+   Button Controls
+   ================================= */
+.counter-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Base button styling - applies to all buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* I learned that :hover and :active pseudo-classes make buttons feel interactive */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific button color schemes */
+.btn-increment {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-increment:hover {
+  background: #38a169;
+}
+
+.btn-decrement {
+  background: #f56565;
+  color: white;
+}
+
+.btn-decrement:hover {
+  background: #e53e3e;
+}
+
+.btn-reset {
+  background: #ed8936;
+  color: white;
+}
+
+.btn-reset:hover {
+  background: #dd6b20;
+}
+
+/* =================================
+   Step Control Section
+   ================================= */
+.step-control {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.step-control label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.step-input {
+  width: 80px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+/* I'm removing the default number input arrows for a cleaner look */
+.step-input::-webkit-inner-spin-button,
+.step-input::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.step-info {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* =================================
+   History Section
+   ================================= */
+.history-section {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.history-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.history-list {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.history-count {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* =================================
+   Features Info Section
+   ================================= */
+.features-info {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.features-info h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+.features-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-info li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+/* =================================
+   Responsive Design
+   ================================= */
+
+/* I learned that media queries help make the app mobile-friendly */
+@media (max-width: 640px) {
+  .advanced-counter {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .advanced-counter h1 {
+    font-size: 2rem;
+  }
+
+  .counter-display h2 {
+    font-size: 2.5rem;
+  }
+
+  .counter-controls {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.check-icon {
+  color: #48bb78;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
