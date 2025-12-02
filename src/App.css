@@ -1,0 +1,19 @@
+/**
+ * App.css - Global Styles
+ *
+ * This sets up the basic styling for the root application container.
+ * I'm keeping it simple since most styling is in AdvancedCounter.css
+ */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #1a202c, #2d3748);
+}
