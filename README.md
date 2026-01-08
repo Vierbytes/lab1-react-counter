@@ -2,9 +2,12 @@
 
 This project demonstrates proficiency with React's `useState` and `useEffect` hooks by building an advanced counter application with multiple features.
 
+![](public/counttrak.png)
+
 ## Project Overview
 
 The Advanced Counter application is built with React, TypeScript, and Vite. It showcases proper hook usage, side effect management, and cleanup functions.
+
 
 ## Features Implemented
 
@@ -86,21 +89,3 @@ npm run build
 npm run lint
 ```
 
-## Project Requirements Met
-
-- ✓ Component named `AdvancedCounter.tsx`
-- ✓ Uses `useState` for count, history, and step
-- ✓ Uses `useEffect` for side effects (auto-save, event listeners)
-- ✓ Proper dependency arrays in all useEffect hooks
-- ✓ Cleanup functions for event listeners
-- ✓ No React console errors
-- ✓ All 5 features implemented (exceeded the 3 minimum requirement)
-
-## Code Quality
-
-- TypeScript for type safety
-- ESLint configured with React-specific rules
-- Clean code with comprehensive comments
-- Responsive CSS design
-- No linting errors
-- Successful production build
